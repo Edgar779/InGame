@@ -1,3 +1,8 @@
+name: ingame
+on:
+  push:
+    branches:
+      - main
 version: '3'
 services:   
   app:
@@ -8,10 +13,6 @@ services:
       - 80:3000
     links:
       - mongo 
-      on:
-  push:
-    branches:
-      - main
   mongo:
     container_name: mongo
     image: mongo
